@@ -94,7 +94,7 @@ function fnParimpar(numero) {
 fnParimpar(4)
 
 
-function FnTemperatura(temperatura = 31, tipoTemperatura = "F", temperaturaConvertida) {
+function FnTemperatura(temperatura = 31, tipoTemperatura = "C", temperaturaConvertida) {
 
     if (tipoTemperatura == "C") {
         temperaturaConvertida = ((temperatura * 1.8) + 32)
@@ -110,6 +110,54 @@ function FnTemperatura(temperatura = 31, tipoTemperatura = "F", temperaturaConve
 
 }
 FnTemperatura(31,"C",)
+
+function tipoTriangulo(lado1, lado2, lado3) {
+ 
+    if (lado1 == lado2 && lado2 == lado3) {
+        console.log("Triângulo equilátero!")
+ 
+    } else if (lado1 == lado2 || lado1 == lado3 || lado2 == lado3) {
+        console.log("Triângulo isósceles!")
+ 
+    } else {
+        console.log("Triângulo escaleno!")
+    }
+ 
+}
+ 
+tipoTriangulo(6, 4, 6)
+
+
+function somaNum (numero) {
+ 
+    let soma = 0
+ 
+    for (let i = 1; i <= numero; i++) {
+        soma += i
+    }
+ 
+    return soma
+}
+ 
+console.log(somaNum(5))
+
+
+function desconto(produto,desconto){
+
+    let valorDesc = produto * (desconto / 100)
+ 
+    let pfinal = produto - valorDesc
+ 
+    console.log("Valor do desconto: R$ " + valorDesc)
+    console.log("Preço final: R$ " + pfinal)
+ 
+}
+ 
+desconto(100)
+ 
+
+ 
+
 
 
 
