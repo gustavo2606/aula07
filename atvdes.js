@@ -109,54 +109,122 @@ function FnTemperatura(temperatura = 31, tipoTemperatura = "C", temperaturaConve
     }
 
 }
-FnTemperatura(31,"C",)
+FnTemperatura(31, "C",)
 
 function tipoTriangulo(lado1, lado2, lado3) {
- 
+
     if (lado1 == lado2 && lado2 == lado3) {
         console.log("Triângulo equilátero!")
- 
+
     } else if (lado1 == lado2 || lado1 == lado3 || lado2 == lado3) {
         console.log("Triângulo isósceles!")
- 
+
     } else {
         console.log("Triângulo escaleno!")
     }
- 
+
 }
- 
+
 tipoTriangulo(6, 4, 6)
 
 
-function somaNum (numero) {
- 
+function somaNum(numero) {
+
     let soma = 0
- 
+
     for (let i = 1; i <= numero; i++) {
         soma += i
     }
- 
+
     return soma
 }
- 
+
 console.log(somaNum(5))
 
 
-function desconto(produto,desconto){
+function desconto(produto, desconto = 10) {
 
     let valorDesc = produto * (desconto / 100)
- 
+
     let pfinal = produto - valorDesc
- 
+
     console.log("Valor do desconto: R$ " + valorDesc)
     console.log("Preço final: R$ " + pfinal)
- 
-}
- 
-desconto(100)
- 
 
- 
+}
+desconto(100)
+
+function informacoes(altura, idade, algumproblemacardieco) {
+    if (altura >= 1.50 && idade >= 12 && algumproblemacardieco == false) {
+        console.log("a pessoa esta autorizada a utilizar o brinquedo")
+    } else {
+        console.log("a pessoa nao esta permitida utilizar o briquedo")
+    }
+}
+informacoes(1.60, 13, true)
+
+
+
+
+function consumo(distancia, combustivel) {
+    let consumoMedio = distancia / combustivel
+
+    console.log("Consumo médio: " + consumoMedio + " km/l")
+}
+consumo(200, 20)
+
+function pares(numero) {
+
+    for (let i = 1; i <= numero; i++) {
+        if (i % 2 === 0) {
+            console.log(i);
+        }
+    }
+}
+pares(5);
+
+function dividirConta(valorTotal, pessoas) {
+
+    let valorPessoas = valorTotal / pessoas;
+
+    console.log("Cada pessoa deverá pagar: R$" + valorPessoas);
+}
+dividirConta(50, 2);
+
+
+function classificacaoNotas(nota) {
+    if (nota >= 9) {
+        console.log("Excelente");
+    } else if (nota >= 7) {
+        console.log("Bom");
+    } else if (nota >= 5) {
+        console.log("Regular");
+    } else {
+        console.log("Insuficiente");
+    }
+}
+classificacaoNotas(2);
+
+
+function quadradoNum(numero) {
+    let quadrado = numero ** 2;
+
+    console.log("O quadrado do número é: " + quadrado);
+}
+quadradoNum(5);
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
